@@ -9,18 +9,18 @@
 </body>
 </html>
 <script>
-  let a = prompt("Nhập vào a = ");
-  let b = prompt("Nhập vào b = ");
-  let c = prompt("Nhập vào c = ");
+  let a = parseInt(prompt("Nhập vào a = "));
+  let b = parseInt(prompt("Nhập vào b = "));
+  let c = parseInt(prompt("Nhập vào c = "));
   if (a>b){
     if (a>c){
-      alert("a là số lớn nhất");
+      alert(+a+"là số lớn nhất");
     }else {
-      alert("c là số lớn nhất");
+      alert(+c+" là số lớn nhất");
     }
   }else if (b>c){
-    alert("b là số lớn nhất");
+    alert(+b+" là số lớn nhất");
   }else {
-    alert("c là số lớn nhất");
+    alert(+c+" là số lớn nhất");
   }
 </script>
