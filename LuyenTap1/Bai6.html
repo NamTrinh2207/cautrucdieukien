@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng dựa trên doanh thu bán hàng</title>
+</head>
+<body>
+<h2>Tính toán số tiền hoa hồng nhận được</h2>
+<label>
+    <input id="money" type="number" style="width: 150px" autofocus placeholder="Nhập vào doanh thu $">
+    <input type="button" value="kết quả" onclick="myFunction()">
+</label>
+<p id="result">$</p>
+</body>
+</html>
+<script>
+  function myFunction(){
+      let mn = parseInt(document.getElementById("money").value);
+      let rose;
+      if (mn<=100){
+          rose = (mn*5)/100
+      }else if (mn<=300){
+          rose = (mn*10)/100
+      }else if (mn>300){
+          rose = (mn*20)/100
+      }
+      document.getElementById("result").innerHTML="Bạn nhận được:"+ rose +"$" +" hoa hồng";
+  }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--600 dồng cho mỗi phút gọi của 50 phút đầu tiên-->
+<!--400 đồng cho mỗi phút gọi của 150 phút tiếp theo-->
+<!--200 đồng cho mỗi phút gọi của 200 phút tiếp theo-->
+</body>
+</html>
+<script>
+    let minute = parseInt(prompt("Nhập số phút gọi :"));
+    let money;
+    if (minute>200){
+        money = (minute-200)*(200+150)*(400+50)*600
+        alert("Bạn đã gọi "+minute+ "phút"+ "số tiền bạn phải nộp là "+ money+"VNĐ");
+    }else if (minute>50){
+        money = (minute-50)*(400+50)*600
+        alert("Bạn đã gọi "+minute+"phút"+" số tiền bạn phải nộp là "+ money+"VNĐ");
+    }else {
+        money = minute*600
+        alert("Bạn đã gọi "+minute+"phút"+" số tiền bạn phải nộp là "+ money+"VNĐ");
+    }
+</script>
