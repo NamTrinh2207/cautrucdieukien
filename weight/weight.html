@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weight</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<p>Cân nặng: (kg)
+  <label><input type="text" id="weight" autofocus placeholder="Nhập vào cân nặng"></label>
+</p>
+<p>Chiều cao: (m)
+  <label><input type="text" id="height" placeholder="Nhập vào chiều cao"></label>
+</p>
+<input type="button" value="Kiểm tra" onclick="myFunction()">
+<p>Kết quả: </p>
+<p id="results"></p>
+</body>
+<script>
+  function myFunction(){
+    let wei = document.getElementById("weight").value;
+    let hei = document.getElementById("height").value;
+    let bmi = wei / (hei*hei);
+    let result;
+
+    if (bmi < 18) {
+      result = "BMI:"+ bmi.toFixed(3) +" "+ "Gầy lắm bạn ơi";
+    }
+    else if (bmi < 25.0) {
+      result =  "BMI:"+ bmi.toFixed(3) +" "+ "Bình thường";
+    }
+    else if (bmi < 30.0) {
+      result =  "BMI:"+ bmi.toFixed(3) +" "+ "Thừa cân rồi bạn ";
+    }
+    else {
+      result =  "BMI:"+ bmi.toFixed(3) +" "+ "Béo phì";
+    }
+    document.getElementById("results").innerHTML =result;
+  }
+</script>
+</html>
