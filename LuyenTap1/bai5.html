@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học sinh</title>
+</head>
+<body>
+<form>
+  <label>
+    <p>Kiểm tra :</p>
+    <input type="number" min="0" max="10" style="width: 100px" id="point" placeholder="Nhập điểm">
+  </label><br>
+  <label>
+    <p>Kiểm tra giữa kỳ :</p>
+    <input type="number" min="0" max="10" style="width: 100px" id="point2" placeholder="Nhập điểm">
+  </label><br>
+  <label>
+    <p>Kiểm tra cuối kỳ :</p>
+    <input type="number" min="0" max="10" style="width: 100px" id="point3" placeholder="Nhập điểm">
+  </label><br>
+  <br><input type="button" value="Kết quả" onclick="mypoint()">
+  <p id="check">Kết quả ở đây...</p>
+</form>
+</body>
+</html>
+<script>
+  function mypoint(){
+    let test = parseInt(document.getElementById("point").value);
+    let test1 = parseInt(document.getElementById("point2").value);
+    let test2 = parseInt(document.getElementById("point3").value);
+    let result = (test+(test1*3)+(test2*6))/10;
+    if (result>=8.5){
+      result = (result+" Điểm: xếp loại giỏi");
+    }else if (result>=7){
+      result = (result+" Điểm: xếp loại khá");
+    }else if (result>=5.5){
+      result = (result+" Điểm: xếp loại trung bình");
+    }else{
+      result = (result+"Điểm: xếp loại yếu");
+    }
+    document.getElementById("check").innerHTML= result;
+  }
+</script>
