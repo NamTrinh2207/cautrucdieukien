@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    while (true) {
+        let edge = +prompt("Nhập độ dài cạnh :");
+        if (edge <= 0) {
+            alert("Nhập lại độ dài cạnht > 0")
+        } else {
+            let acreage = Math.pow(edge, 2);
+            document.write("Diện tích hình vuông là " + edge + " x " + edge + " = " + acreage)
+            break;
+        }
+    }
+</script>

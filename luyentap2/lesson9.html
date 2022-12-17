@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 điểm có tạo thành tam giác</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let A = +prompt("Nhập vào cạnh A");
+    let B = +prompt("Nhập vào cạnh B");
+    let C = +prompt("Nhập vào cạnh C");
+    if (A> 0){
+        if (B>0){
+            if (C>0){
+                if (A + B > C || B + C > A || C + A > B) {
+                    alert("A,B,C tạo thành tam giác");
+                }else {
+                    alert("A,B,C không tạo thành tam giác")}
+            }else {
+                alert("C phải > 0")
+            }
+        }else {
+            alert("B phải > 0")
+        }
+    }else {
+        alert("A phải > 0")
+    }
+</script>

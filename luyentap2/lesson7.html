@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = +prompt("Nhập vào số thứ nhất");
+    let b = +prompt("Nhập vào số thứ hai");
+    let c = +prompt("Nhập vào số thứ ba");
+    if (a === 0) {
+        if (b === 0) {
+            if (c === 0) {
+                alert("Phương trình có vô số nghiệm");
+            } else {
+                alert("Phương trình vô nghiệm");
+            }
+        } else {
+            let result = -c / b;
+            document.write("Phương trình có 1 nghiệm x =  " + result);
+        }
+    } else {
+        let delta = Math.pow(b, 2) - (4 * a * c);
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm");
+        } else if (delta === 0) {
+            result = -b / (2 * a);
+            document.write("phương trình có nghiệm kép x1 = x2 = " + result);
+        } else {
+            let x1 = (-b + Math.sqrt(d)) / (2 * a);
+            let x2 = (-b - Math.sqrt(d)) / (2 * a);
+            document.write("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + " x2 = " + x2);
+        }
+    }
+</script>
+

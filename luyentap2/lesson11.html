@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let thue = +prompt("Nhập vào thu nhập tháng :")
+    let total;
+    if (0 < thue <= 5) {
+        total = (thue * 5) / 100;
+    } else if (thue <= 10) {
+        total = (thue * 10) / 100;
+    } else if (thue <= 18) {
+        total = (thue * 15) / 100;
+    } else if (thue <= 32) {
+        total = (thue * 20) / 100;
+    } else if (thue <= 52) {
+        total = (thue * 25) / 100;
+    } else if (thue <= 80) {
+        total = (thue * 30) / 100;
+    } else {
+        total = (thue * 35) / 100;
+    }
+    document.write("Số tiền thuế phải trả cho mức lương " + thue + " triệu là : " + total.toFixed(1) + " Triệu");
+</script>

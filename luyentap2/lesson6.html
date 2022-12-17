@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //giải phương trình bậc nhất ax+b=0
+    let a = +prompt("Nhập vào số thứ nhất");
+    let b = +prompt("Nhập vào số thứ hai");
+    if (a == 0) {
+        if (b == 0) {
+            document.write("Phương trình có vô số nghiệm");
+        } else {
+            document.write("Phương trình vô nghiệm");
+        }
+    } else {
+        let x = -b / (2 * a)
+        document.write("Phương trình có nghiệm = " + x);
+    }
+</script>

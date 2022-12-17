@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let number = +prompt("Nhập số điện :")
+    let total = 0;
+    if (0 < number <= 50) {
+        total = number * 1.678;
+    } else if (number <= 100) {
+        total = number * 1.734;
+    } else if (number < 200) {
+        total = number * 2.014;
+    } else if (number < 300) {
+        total = number * 2.536;
+    }
+    document.write("Số tiền phải trả cho " + number + " số điện là :" + total.toFixed(3) + " VND");
+</script>
