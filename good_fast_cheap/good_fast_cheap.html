@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good-Fast-Cheap</title>
+    <style>
+        body {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-left: 40%;
+            margin-top: 10%;
+        }
+        div{
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin: 10px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition:.3s;
+            transition:.3s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: " ";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .3s;
+            transition: .3s;
+        }
+
+        input:checked + .good {
+            background-color: seagreen;
+        }
+
+        input:checked + .fast {
+            background-color: red;
+        }
+
+        input:checked + .cheap {
+            background-color: gold;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            transform: translateX(30px);
+        }
+
+        .slider.round {
+            border-radius: 20px;
+        }
+
+        .slider.round:before {
+            border-radius: 60%;
+        }
+
+        span p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <label class="switch">
+        <input type="checkbox" id="good" onclick=clickGood()>
+        <span class="slider round good"></span>
+    </label>
+    <span><p><b>Good</b></p></span>
+    <br/>
+
+    <label class="switch">
+        <input type="checkbox" id="fast" onclick=clickFast()>
+        <span class="slider round fast"></span>
+    </label>
+    <span><p><b>Fast</b></p></span>
+    <br/>
+
+    <label class="switch">
+        <input type="checkbox" id="cheap" onclick=clickCheap()>
+        <span class="slider round cheap"></span>
+    </label>
+    <span><p><b>Cheap</b></p></span>
+</div>
+</body>
+</html>
+<script>
+    // Click to good
+    function clickGood() {
+        let aGood = document.getElementById("good").checked;
+        let aFast = document.getElementById("fast").checked;
+        let aCheap = document.getElementById("cheap").checked;
+        console.log(aGood, aFast, aCheap);
+        if (aGood && aFast) {
+            if (Math.random() < 0.4) {
+                document.getElementById("good").checked = 0;
+            } else {
+                document.getElementById("fast").checked = 0;
+            }
+        }
+    }
+
+    // Click to fast
+    function clickFast() {
+        let aGood = document.getElementById("good").checked;
+        let aFast = document.getElementById("fast").checked;
+        let aCheap = document.getElementById("cheap").checked;
+        console.log(aGood, aFast, aCheap);
+        if (aFast && aCheap) {
+            if (Math.random() < 0.4) {
+                document.getElementById("fast").checked = 0;
+            } else {
+                document.getElementById("cheap").checked = 0;
+            }
+        }
+    }
+
+    // Click to cheap
+    function clickCheap() {
+        let aGood = document.getElementById("good").checked;
+        let aFast = document.getElementById("fast").checked;
+        let aCheap = document.getElementById("cheap").checked;
+        console.log(aGood, aFast, aCheap);
+        if (aCheap && aGood) {
+            if (Math.random() < 0.4) {
+                document.getElementById("cheap").checked = 0;
+            } else {
+                document.getElementById("good").checked = 0;
+            }
+        }
+    }
+</script>
